@@ -1,16 +1,23 @@
+/* GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
   color: white;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
   background-color: #000;
+  text-align: center;
 }
 
 /* background video */
@@ -18,87 +25,8 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
+  width: 100
 
-/* main layout container */
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  z-index: 1;
-}
-
-/* invite card */
-.content {
-  background-color: rgba(255, 182, 193, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  padding: 20px;
-  backdrop-filter: blur(3px);
-}
-
-.content p {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-/* rsvp form */
-.rsvp-form {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-}
-
-.rsvp-form h2 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.rsvp-form input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-.rsvp-form button {
-  padding: 10px 20px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.rsvp-form button:hover {
-  background-color: #ff1493;
-}
-
-.wishlist {
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  color: black;
-  font-weight: bold;
-}
-
-.wishlist a {
-  color: #ff1493;
-  text-decoration: none;
-}
 
 .wishlist a:hover {
   text-decoration: underline;
