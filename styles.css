@@ -61,11 +61,13 @@ video {
 
 /* rsvp form */
 .rsvp-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 10px;
   backdrop-filter: blur(5px);
-  width: 100%;
 }
 
 .rsvp-form h2 {
@@ -73,23 +75,24 @@ video {
   font-size: 1.5rem;
 }
 
-.rsvp-form input {
+/* updated input + button styles */
+.rsvp-form input,
+.rsvp-form button {
   display: block;
   margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  border-radius: 5px;
-  border: none;
+  padding: 12px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .rsvp-form button {
-  padding: 10px 20px;
   background-color: #ff69b4;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -106,6 +109,8 @@ video {
   backdrop-filter: blur(5px);
   color: black;
   font-weight: bold;
+  max-width: 400px;
+  width: 90%;
 }
 
 .wishlist a {
@@ -117,16 +122,15 @@ video {
   text-decoration: underline;
 }
 
+/* confirmation message */
+#rsvp-msg {
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
 /* RESPONSIVE TWEAKS */
 @media (max-width: 480px) {
-  .rsvp-form input {
-    width: 100%;
-  }
-
-  .rsvp-form button {
-    width: 100%;
-  }
-
   .content p,
   .rsvp-form h2 {
     font-size: 1rem;
