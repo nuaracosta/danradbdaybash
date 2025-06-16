@@ -25,9 +25,110 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
 
+/* main layout container */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* invite card */
+.content {
+  background-color: rgba(255, 182, 193, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+  width: 100%;
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* rsvp form */
+.rsvp-form {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  width: 100%;
+}
+
+.rsvp-form h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.rsvp-form input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.rsvp-form button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.rsvp-form button:hover {
+  background-color: #ff1493;
+}
+
+/* wishlist section */
+.wishlist {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  color: black;
+  font-weight: bold;
+}
+
+.wishlist a {
+  color: #ff1493;
+  text-decoration: none;
+}
 
 .wishlist a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 480px) {
+  .rsvp-form input {
+    width: 100%;
+  }
+
+  .rsvp-form button {
+    width: 100%;
+  }
+
+  .content p,
+  .rsvp-form h2 {
+    font-size: 1rem;
+  }
 }
