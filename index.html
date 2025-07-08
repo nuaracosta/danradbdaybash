@@ -30,11 +30,14 @@ te<!DOCTYPE html>
         onsubmit="document.getElementById('rsvp-msg').style.display = 'block';"
       >
         <h2>RSVP</h2>
+        <form style="text-align: center;">
         <input type="text" name="name" placeholder="Your Name" required />
+        <br /><br />
         <input type="tel" name="phone" placeholder="Phone Number" required />
-        
+        <br /><br />
+
         <label>Plus one?</label>
-        <div style="display: center; gap: 10px; margin: 5px 0;">
+        <div style="display: flex; justify-content: center; gap: 20px; margin: 10px 0;">
         <label>
         <input type="radio" name="plus" value="Yes" required /> Yes
         </label>
@@ -42,10 +45,9 @@ te<!DOCTYPE html>
         <input type="radio" name="plus" value="No" /> No
         </label>
         </div>
-        
-        <button type="submit">I'm coming! 🎉</button>
-        </form>
 
+  <button type="submit">I'm coming! 🎉</button>
+</form>
       <iframe name="hidden_iframe" style="display: none"></iframe>
       <p
         id="rsvp-msg"
